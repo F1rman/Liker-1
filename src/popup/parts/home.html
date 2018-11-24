@@ -1,0 +1,51 @@
+<div class="leftSide">
+	<div ng-repeat="i in data.feed" style="background-image: url({{i.thumbnail_resources[0].src}})"> </div>
+</div>
+<div class="rightSide">
+	<div class="ui icon menu" ng-init="theme(true);" style="border-top: 0; border-left: 0; border-right: 0; border-radius: 0; margin: -10px;">
+		<!-- <a class="item">
+			<i class="settings icon"></i>
+		</a> -->
+		<a class="item" href="#!info">
+			<i class="info icon"></i>
+		</a>
+		<div class="right menu">
+			<a class="item">
+				@{{data.user.username}}
+			</a>
+		</div>
+	</div>
+	<br>
+	<div>
+		Liker is {{data.status | lowercase}}
+	</div>
+	<div class="ui indicating progress">
+	  <div class="bar"></div>
+	  <div class="label">Likes made today: {{data.feed.length}} of 500</div>
+	</div>
+
+	<h3 class="ui header dividing" style="margin-bottom: 22px;" ng-init="theme(3)">Tasks</h3>
+	<div class="ui cards" ng-repeat="i in data.tasks">
+	  <div class="card">
+	    <div class="content">
+	      <div class="header">{{i.type}}</div>
+	      <div class="description">
+	        {{i.textarea}}
+	      </div>
+	    </div>
+	    <div class="ui bottom attached button" ng-click="taskFunc($index)">
+	      <i class="edit icon"></i>
+	      edit task
+	    </div>
+	  </div>
+	</div>
+	<br>
+	<div class="ui warning message" ng-if="ap.showError1" ng-click="ap.showError1 = false;">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Only PLUS member can add a task 
+	  </div>
+	</div>
+	<button class="fluid ui button" ng-click="(data.tasks.length > 0)?ap.showError1 = true:taskFunc('add')"><i class="plus icon"></i>add new</button>
+
+</div>

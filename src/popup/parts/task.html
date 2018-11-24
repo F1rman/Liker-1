@@ -1,0 +1,35 @@
+<div class="configPage">
+	<h3 class="ui header dividing" style="margin-bottom: 22px;" ng-init="theme()">New Task Creation</h3>
+	<form class="ui form">
+	<div class="field">
+	      <label>Filter</label>
+			<select class="ui fluid dropdown" ng-model="newTask.type">
+				<option value="hashtag">Like by hashtags</option>
+				<option value="AL" disabled>Like by locations | PLUS only</option>
+				<option value="AL" disabled>Like my feed | PLUS only</option>
+				<option value="AL" disabled>Like user's followers | PLUS only</option>
+				<option value="AL" disabled>Like user's followings | PLUS only</option>
+			</select>
+	    </div>
+	</form>
+	<br>
+	<div class="ui form">
+	  <div class="field">
+	    <label>Tags</label>
+	    <textarea placeholder="#love #instagood #me #cute #tbt #photooftheday #instamood #iphonesia #tweegram #picoftheday #igers #girl #beautiful #instadaily #summer #instagramhub #iphoneonly #follow #igdaily" rows="2" ng-model="newTask.textarea"></textarea>
+	  </div>
+	</div>
+	<br>
+	<div class="inline field">
+	    <div class="ui toggle checkbox">
+	      <input type="checkbox" tabindex="0" class="hidden" checked="true" ng-model="newTask.isEnabled">
+	      <label>{{newTask.isEnabled?'Enabled':'Disabled'}}</label>
+	    </div>
+	  </div>
+	<br>
+	<div class="ui buttons">
+	  <button class="ui primary button" ng-click="save()">Save</button>
+	  <div class="or"></div>
+	  <button class="ui button" ng-click="window.location.href = '#!home';">Cancel</button>
+	</div>
+</div>

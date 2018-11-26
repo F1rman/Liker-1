@@ -1,5 +1,6 @@
 <div class="leftSide">
-	<div ng-repeat="i in data.feed" style="background-image: url({{i.thumbnail_resources[0].src}})"> </div>
+	<h3></h3>
+	<div class="was_liked" ng-repeat="i in data.feed" style="background-image: url({{i.thumbnail_resources[0].src}})"></div>
 </div>
 <div class="rightSide">
 	<div class="ui icon menu" ng-init="theme(true);" style="border-top: 0; border-left: 0; border-right: 0; border-radius: 0; margin: -10px;">
@@ -10,14 +11,14 @@
 			<i class="info icon"></i>
 		</a>
 		<div class="right menu">
-			<a class="item">
+			<a target="_blank" title="https://www.instagram.com/{{data.user.username}}"  href="https://www.instagram.com/{{data.user.username}}" class="item">
 				@{{data.user.username}}
 			</a>
 		</div>
 	</div>
 	<br>
-	<div>
-		Liker is {{data.status | lowercase}}
+	<div class="flex_container_column">
+		<span class="logo_liker"><span class="liker_l">L</span><span class="liker_i">i</span><span class="liker_k">k</span><span class="liker_e">e</span><span class="liker_r">r</span></span> is {{data.status | lowercase}}
 	</div>
 	<div class="ui indicating progress">
 	  <div class="bar"></div>

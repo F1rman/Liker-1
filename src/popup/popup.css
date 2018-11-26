@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Billabong';
+  src: url('Billabong.ttf'); /* IE9 Compat Modes */
+  
+}
+
 html, body{
-	height: 322px;
-	max-height: 322px;
+	height: 450px;
+	max-height: 450px;
 	min-width: 320px; 
 	transition: .3s ease-in;
 }
@@ -34,7 +40,7 @@ html, body{
 }
 
 .rightSide{
-	overflow-y: scroll;
+	overflow-y:scroll;
 	padding: 10px;
 	position: absolute;
 	right: 0;
@@ -45,4 +51,56 @@ html, body{
 
 .configPage{
 	padding: 10px;
+}
+
+.flex_container_column{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.was_liked{
+	cursor: pointer;
+	background-size: cover;
+
+	transform: translateY(-105px);
+	transition: all 0.3s ease;
+}
+
+.was_liked:hover{
+	
+	
+}
+
+.ui.cards>.card{
+	width: 100%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+span.logo_liker{
+	font-size: 60px;
+	letter-spacing: 10px;
+    color: #ffffff;
+    text-shadow: 0px 0px 30px #ff00d4;
+	font-family: 'Billabong';
+    padding: 30px;
+}
+
+
+span.logo_liker span.liker_l{
+	text-shadow: 0px 0px 30px #2400ff;
+}
+span.logo_liker span.liker_i{
+	text-shadow: 0px 0px 20px #d100ff;
+}
+span.logo_liker span.liker_k{
+	text-shadow: 0px 0px 30px #ff0000;
+}
+span.logo_liker span.liker_e{
+	text-shadow: 0px 0px 30px #ff0091;
+}
+span.logo_liker span.liker_r{
+	text-shadow: 0px 0px 30px #ff7600;
 }
